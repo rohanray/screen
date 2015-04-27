@@ -1,0 +1,27 @@
+<head>
+  <title>sociosphere</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteora! {{> loginButtons}}</h1>
+  <label class="hide-completed">
+	Load FB Feed
+  </label>
+
+  <ul>
+    {{#each feeds}}
+      {{> feed}}
+    {{/each}}
+  </ul>
+
+</body>
+
+<template name="feed">
+  <li>
+    <span name="from" style="display:block">{{fromName}}</span>
+    <span name="message" style="margin-left:20px;">{{message}}</span>
+    <span name="created_Time">{{created_Time}}</span>
+    <span name="story">{{story}}</span>
+  </li>
+  <br>
+</template>
