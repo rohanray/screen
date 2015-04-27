@@ -1,0 +1,14 @@
+/* CSS declarations go here */
+
+body {
+	font-family: "Roboto";
+}
+
+core-toolbar {
+	background:	rgba(0,0,0,0.6);
+	color: #FFF;
+}
+
+.content {
+	padding: 20px;
+}
