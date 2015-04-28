@@ -56,15 +56,15 @@
 
 	<core-drawer-panel id="drawerPanel" responsiveWidth="800px">
 	
-		<core-header-panel mode="waterfall" drawer>
+		<core-header-panel style="background:#f2f2f2;" mode="waterfall" drawer>
 
 			<core-toolbar>SocioSphere</core-toolbar>
 		
 				<core-menu>
 
-					<core-item label="SocA" icon="social-post:facebook"></core-item>
+					<core-item label="SocA" icon="social-post:facebook" class="facebookColour"></core-item>
 					
-					<core-item label="SocB" icon="social-post:twitter"></core-item>
+					<core-item label="SocB" icon="social-post:twitter" class="twitterColour"></core-item>
 
 					<core-item label="Social Contacts" icon="social:people"></core-item>
 				
@@ -72,12 +72,10 @@
 		
 		</core-header-panel>
 
-		<core-header-panel style="background:#f2f2f2;" mode="waterfall" main>
+		<core-header-panel mode="waterfall" main>
 
 			<core-toolbar>
 				<paper-icon-button core-drawer-toggle icon="menu"></paper-icon-button>
-
-				<div></div>
 
 				<span flex></span>
 
@@ -87,13 +85,69 @@
 
 			<div class="content">
 
-			  <div horizontal layout>
-			    <paper-shadow z="1" class="card card-progress">
+			    <paper-shadow z="2" class="card" style="background:#f2f2f2;" flex>
 
+			    	<div class="contactsrow" horizontal layout>
 			    	
+			    		<div style="width:45%; padding: 16px; margin: 16px; border-radius: 5px; background-color: #fff;">
+			    			
+			    			<img src="/images/male_avatar_icon.jpg" style="width:80px; height:80px;">
+			    			<div style="font-size: 22px; padding: 8px 0 16px; color: #666;">Cu mei vide viris gloriatur, at populo eripuit sit.</div>
+
+			    		</div>
+
+			    		<span style="width:5%;"></span>
+
+			    		<div style="width:45%; padding: 16px; margin: 16px; border-radius: 5px; background-color: #fff;">
+			    			
+			    			<img src="/images/female_avatar_icon.jpg" style="width:80px; height:80px;">
+			    			<div style="font-size: 22px; padding: 8px 0 16px; color: #666;">Cu mei vide viris gloriatur, at populo eripuit sit.</div>
+
+			    		</div>
+
+			    	</div>
+
+			    	<div class="contactsrow" horizontal layout>
+			    	
+			    		<div style="width:45%; padding: 16px; margin: 16px; border-radius: 5px; background-color: #fff;">
+			    			
+			    			<img src="/images/male_avatar_icon.jpg" style="width:80px; height:80px;">
+			    			<div style="font-size: 22px; padding: 8px 0 16px; color: #666;">Cu mei vide viris gloriatur, at populo eripuit sit.</div>
+
+			    		</div>
+
+			    		<span style="width:5%;"></span>
+
+			    		<div style="width:45%; padding: 16px; margin: 16px; border-radius: 5px; background-color: #fff;">
+			    			
+			    			<img src="/images/female_avatar_icon.jpg" style="width:80px; height:80px;">
+			    			<div style="font-size: 22px; padding: 8px 0 16px; color: #666;">Cu mei vide viris gloriatur, at populo eripuit sit.</div>
+
+			    		</div>
+
+			    	</div>
+
+			    	<div class="contactsrow" horizontal layout>
+			    	
+			    		<div style="width:45%; padding: 16px; margin: 16px; border-radius: 5px; background-color: #fff;">
+			    			
+			    			<img src="/images/male_avatar_icon.jpg" style="width:80px; height:80px;">
+			    			<div style="font-size: 22px; padding: 8px 0 16px; color: #666;">Cu mei vide viris gloriatur, at populo eripuit sit.</div>
+
+			    		</div>
+
+			    		<span style="width:5%;"></span>
+
+			    		<div style="width:45%; padding: 16px; margin: 16px; border-radius: 5px; background-color: #fff;">
+			    			
+			    			<img src="/images/female_avatar_icon.jpg" style="width:80px; height:80px;">
+			    			<div style="font-size: 22px; padding: 8px 0 16px; color: #666;">Cu mei vide viris gloriatur, at populo eripuit sit.</div>
+
+			    		</div>
+
+			    	</div>
 
 			    </paper-shadow>
-			  </div>
 			        
 			      </div>
 

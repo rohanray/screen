@@ -10,5 +10,17 @@ core-toolbar {
 }
 
 .content {
-	padding: 20px;
+	padding: 40px;
+}
+
+.card {
+	padding: 40px;
+}
+
+.facebookColour {
+	color: #3b5998 ;
+}
+
+.twitterColour {
+	color: #4099FF
 }
