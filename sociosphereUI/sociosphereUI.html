@@ -12,6 +12,7 @@
 <link rel="import" href="/components/core-drawer-panel/core-drawer-panel.html">
 <link rel="import" href="/components/core-pages/core-pages.html">
 <link rel="import" href="/components/core-icons/core-icons.html">
+<link rel="import" href="/components/core-icons/hardware-icons.html">
 <link rel="import" href="/components/core-icons/editor-icons.html">
 <link rel="import" href="/components/core-icons/social-icons.html">
 <link rel="import" href="/components/core-item/core-item.html">
@@ -87,61 +88,39 @@
 
 			    <paper-shadow z="2" class="card" style="background:#f2f2f2;" flex>
 
-			    	<div class="contactsrow" horizontal layout>
-			    	
-			    		<div style="width:45%; padding: 16px; margin: 16px; border-radius: 5px; background-color: #fff;">
-			    			
-			    			<img src="/images/male_avatar_icon.jpg" style="width:80px; height:80px;">
-			    			<div style="font-size: 22px; padding: 8px 0 16px; color: #666;">Cu mei vide viris gloriatur, at populo eripuit sit.</div>
+			    	<div class="allContactsContainer" vertical layout>
+
+			    		<div class="perContactRowContainer" style="width:45%; padding: 16px; margin: 16px; border-radius: 5px; background-color: #fff;" auto-vertical>
+
+			    			<div class="avatarSocioIcons" horizontal layout>
+
+			    				<img src="/images/male_avatar_icon.jpg" style="width:60px; height:60px;">
+
+			    				<paper-icon-button class="contactSocialIcons" icon="social-post:facebook" flex></paper-icon-button>
+
+			    				<paper-icon-button class="contactSocialIcons" icon="social-post:twitter" flex></paper-icon-button>
+
+			    				<paper-icon-button class="contactSocialIcons" icon="social-post:instagram" flex></paper-icon-button>
+
+			    				<paper-icon-button class="contactSocialIcons" icon="mail" flex></paper-icon-button>
+
+			    				<paper-icon-button class="contactSocialIcons" icon="hardware:phone-android" flex></paper-icon-button>
+
+			    			</div>
 
 			    		</div>
 
-			    		<span style="width:5%;"></span>
+			    		<div class="perContactRowContainer" style="width:45%; padding: 16px; margin: 16px; border-radius: 5px; background-color: #fff;" auto-vertical>
 
-			    		<div style="width:45%; padding: 16px; margin: 16px; border-radius: 5px; background-color: #fff;">
-			    			
-			    			<img src="/images/female_avatar_icon.jpg" style="width:80px; height:80px;">
-			    			<div style="font-size: 22px; padding: 8px 0 16px; color: #666;">Cu mei vide viris gloriatur, at populo eripuit sit.</div>
+			    			<div class="avatarSocioIcons" horizontal layout>
 
-			    		</div>
+			    				<img src="/images/female_avatar_icon.jpg" style="width:60px; height:60px;">
 
-			    	</div>
+			    				<paper-icon-button icon="social-post:facebook"></paper-icon-button>
 
-			    	<div class="contactsrow" horizontal layout>
-			    	
-			    		<div style="width:45%; padding: 16px; margin: 16px; border-radius: 5px; background-color: #fff;">
-			    			
-			    			<img src="/images/male_avatar_icon.jpg" style="width:80px; height:80px;">
-			    			<div style="font-size: 22px; padding: 8px 0 16px; color: #666;">Cu mei vide viris gloriatur, at populo eripuit sit.</div>
+			    				<paper-icon-button icon="social-post:twitter"></paper-icon-button>
 
-			    		</div>
-
-			    		<span style="width:5%;"></span>
-
-			    		<div style="width:45%; padding: 16px; margin: 16px; border-radius: 5px; background-color: #fff;">
-			    			
-			    			<img src="/images/female_avatar_icon.jpg" style="width:80px; height:80px;">
-			    			<div style="font-size: 22px; padding: 8px 0 16px; color: #666;">Cu mei vide viris gloriatur, at populo eripuit sit.</div>
-
-			    		</div>
-
-			    	</div>
-
-			    	<div class="contactsrow" horizontal layout>
-			    	
-			    		<div style="width:45%; padding: 16px; margin: 16px; border-radius: 5px; background-color: #fff;">
-			    			
-			    			<img src="/images/male_avatar_icon.jpg" style="width:80px; height:80px;">
-			    			<div style="font-size: 22px; padding: 8px 0 16px; color: #666;">Cu mei vide viris gloriatur, at populo eripuit sit.</div>
-
-			    		</div>
-
-			    		<span style="width:5%;"></span>
-
-			    		<div style="width:45%; padding: 16px; margin: 16px; border-radius: 5px; background-color: #fff;">
-			    			
-			    			<img src="/images/female_avatar_icon.jpg" style="width:80px; height:80px;">
-			    			<div style="font-size: 22px; padding: 8px 0 16px; color: #666;">Cu mei vide viris gloriatur, at populo eripuit sit.</div>
+			    			</div>
 
 			    		</div>
 
@@ -149,7 +128,7 @@
 
 			    </paper-shadow>
 			        
-			      </div>
+			    </div>
 
 		</core-header-panel>
 
