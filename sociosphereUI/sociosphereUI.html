@@ -57,72 +57,371 @@
 
 	<core-drawer-panel id="drawerPanel" responsiveWidth="800px">
 	
-		<core-header-panel style="background:#f2f2f2;" mode="waterfall" drawer>
+		<core-header-panel style="background:#fff;" mode="waterfall" drawer>
 
-			<core-toolbar>SocioSphere</core-toolbar>
-		
+			<core-toolbar>Socio<span style="color:#24AFE5;">Sphere</span></core-toolbar>
+				
 				<core-menu>
 
-					<core-item label="SocA" icon="social-post:facebook" class="facebookColour"></core-item>
+					<core-item label="My Facebook" icon="social-post:facebook" class="facebookColour"></core-item>
 					
-					<core-item label="SocB" icon="social-post:twitter" class="twitterColour"></core-item>
+					<core-item label="My Twitter" icon="social-post:twitter" class="twitterColour"></core-item>
 
-					<core-item label="Social Contacts" icon="social:people"></core-item>
+					<core-item label="Social Contacts" icon="social:people" ></core-item>
 				
 				</core-menu>
 		
 		</core-header-panel>
 
-		<core-header-panel mode="waterfall" main>
+		<core-header-panel style="background:#f2f2f2;" mode="waterfall-tall" main>
+			<core-toolbar top><core-item label="Social Contacts" icon="social:people"></core-item></core-toolbar>
 
 			<core-toolbar>
 				<paper-icon-button core-drawer-toggle icon="menu"></paper-icon-button>
 
+				<paper-tabs selected="4" horizontal flex layout style="font-size:0.7em;">
+  
+    <paper-tab inline flex center-center horizontal layout>Facebook</paper-tab>
+    
+    <paper-tab inline flex center-center horizontal layout>Twitter</paper-tab>
+    
+    <paper-tab inline flex center-center horizontal layout>Instagram</paper-tab>
+
+    <paper-tab inline flex center-center horizontal layout>All Contacts</paper-tab>
+    
+  </paper-tabs>
+
 				<span flex></span>
 
 				<paper-icon-button icon="search"></paper-icon-button> 
+				
+				<paper-icon-button icon="more-vert" horizontal end-justified layout></paper-icon-button>
 
 			</core-toolbar>
 
 			<div class="content">
 
-			    <paper-shadow z="2" class="card" style="background:#f2f2f2;" flex>
+			    <paper-shadow z="0" style="background:#f2f2f2; padding:40px;" flex>
 
-			    	<div class="allContactsContainer" vertical layout>
+			    	<div class="allContactsContainer">
 
-			    		<div class="perContactRowContainer" style="width:45%; padding: 16px; margin: 16px; border-radius: 5px; background-color: #fff;" auto-vertical>
+			    		<div class="allContactsPerRowContainer" horizontal layout>
 
-			    			<div class="avatarSocioIcons" horizontal layout>
+			    		<paper-shadow z="2" class="perContactRowContainer" style="width:45%; background-color: #fff; height:100px;" horizontal layout> 
 
-			    				<img src="/images/male_avatar_icon.jpg" style="width:60px; height:60px;">
+			    			<img src="/images/akash.jpg" style="max-width:100px; max-height:100px;">
 
-			    				<paper-icon-button class="contactSocialIcons" icon="social-post:facebook" flex></paper-icon-button>
+			    			<div class="avatarSocioIcons" flex style="padding-left:32px; padding-top:16px;">
 
-			    				<paper-icon-button class="contactSocialIcons" icon="social-post:twitter" flex></paper-icon-button>
+								<div class="contactName" style="color:rgba(0,0,0,0.6); font-size:20px; font-weight:bold; padding-left:10px; margin-bottom:6px;">Akash Babu <span style="font-weight:normal; color:rgba(0,0,0,0.6); font-size:14px;">[$213 from 4 visits]</span></div>
+
+			    				<paper-icon-button class="contactSocialIcons facebookColour" icon="social-post:facebook" flex></paper-icon-button>
+
+			    				<paper-icon-button class="contactSocialIcons twitterColour" icon="social-post:twitter" flex></paper-icon-button>
 
 			    				<paper-icon-button class="contactSocialIcons" icon="social-post:instagram" flex></paper-icon-button>
 
-			    				<paper-icon-button class="contactSocialIcons" icon="mail" flex></paper-icon-button>
+			    				<paper-icon-button class="contactSocialIcons goolgePlusRedColor" icon="mail" flex></paper-icon-button>
 
-			    				<paper-icon-button class="contactSocialIcons" icon="hardware:phone-android" flex></paper-icon-button>
+			    				<paper-icon-button class="contactSocialIcons phoneIconColor" icon="hardware:phone-android" flex></paper-icon-button>
 
-			    			</div>
-
-			    		</div>
-
-			    		<div class="perContactRowContainer" style="width:45%; padding: 16px; margin: 16px; border-radius: 5px; background-color: #fff;" auto-vertical>
-
-			    			<div class="avatarSocioIcons" horizontal layout>
-
-			    				<img src="/images/female_avatar_icon.jpg" style="width:60px; height:60px;">
-
-			    				<paper-icon-button icon="social-post:facebook"></paper-icon-button>
-
-			    				<paper-icon-button icon="social-post:twitter"></paper-icon-button>
+			    				<img src="/images/loyalty_score.jpg" style="top:-4px;">
 
 			    			</div>
 
-			    		</div>
+			    		</paper-shadow>
+							
+								<span flex></span>
+
+			    		    		<paper-shadow z="2" class="perContactRowContainer" style="width:45%; background-color: #fff; height:100px;" horizontal layout> 
+
+			    		    			<img src="/images/sush.jpg" style="max-width:100px; max-height:100px;">
+
+			    		    			<div class="avatarSocioIcons" flex style="padding-left:32px; padding-top:16px;">
+
+			    							<div class="contactName" style="color:rgba(0,0,0,0.6); font-size:20px; font-weight:bold; padding-left:10px; margin-bottom:6px;">The Babe <span style="font-weight:normal; color:rgba(0,0,0,0.6); font-size:14px;">[$13 from 2 visits]</span></div>
+
+			    		    				<paper-icon-button class="contactSocialIcons facebookColour" icon="social-post:facebook" flex></paper-icon-button>
+
+			    		    				<paper-icon-button class="contactSocialIcons twitterColour" icon="social-post:twitter" flex></paper-icon-button>
+
+			    		    				<paper-icon-button class="contactSocialIcons" icon="social-post:instagram" flex></paper-icon-button>
+
+			    		    				<paper-icon-button class="contactSocialIcons goolgePlusRedColor" icon="mail" flex></paper-icon-button>
+
+			    		    				<paper-icon-button class="contactSocialIcons phoneIconColor" icon="hardware:phone-android" flex></paper-icon-button>
+
+			    		    				<img src="/images/loyalty_score.jpg">
+			    		    			</div>
+
+			    		    		</paper-shadow>
+
+			    		    	</div>
+
+			    		    	<div class="allContactsPerRowContainer" style="margin-top:30px;" horizontal layout>
+
+	    		    		    		<paper-shadow z="2" class="perContactRowContainer" style="width:45%; background-color: #fff; height:100px;" horizontal layout> 
+
+	    		    		    			<img src="/images/ugale.jpg" style="max-width:100px; max-height:100px;">
+
+	    		    		    			<div class="avatarSocioIcons" flex style="padding-left:32px; padding-top:16px;">
+
+	    		    							<div class="contactName" style="color:rgba(0,0,0,0.6); font-size:20px; font-weight:bold; padding-left:10px; margin-bottom:6px;">Ugale Bava <span style="font-weight:normal; color:rgba(0,0,0,0.6); font-size:14px;">[$666 from 6 visits]</span></div>
+
+	    		    		    				<paper-icon-button class="contactSocialIcons facebookColour" icon="social-post:facebook" flex></paper-icon-button>
+
+	    		    		    				<paper-icon-button class="contactSocialIcons twitterColour" icon="social-post:twitter" flex></paper-icon-button>
+
+	    		    		    				<paper-icon-button class="contactSocialIcons" icon="social-post:instagram" flex></paper-icon-button>
+
+	    		    		    				<paper-icon-button class="contactSocialIcons goolgePlusRedColor" icon="mail" flex></paper-icon-button>
+
+	    		    		    				<paper-icon-button class="contactSocialIcons phoneIconColor" icon="hardware:phone-android" flex></paper-icon-button>
+
+	    		    		    				<img src="/images/loyalty_score.jpg">
+
+	    		    		    			</div>
+
+	    		    		    		</paper-shadow>
+
+										<span flex></span>
+
+			    		    		<paper-shadow z="2" class="perContactRowContainer" style="width:45%; background-color: #fff; height:100px;" horizontal layout> 
+
+			    		    			<img src="/images/female_avatar_icon.jpg" style="max-width:100px; max-height:100px;">
+
+			    		    			<div class="avatarSocioIcons" flex style="padding-left:32px; padding-top:16px;">
+
+			    							<div class="contactName" style="color:rgba(0,0,0,0.6); font-size:20px; font-weight:bold; padding-left:10px; margin-bottom:6px;">The Bitch <span style="font-weight:normal; color:rgba(0,0,0,0.6); font-size:14px;">[$999 from 12 visits]</span></div>
+
+			    		    				<paper-icon-button class="contactSocialIcons facebookColour" icon="social-post:facebook" flex></paper-icon-button>
+
+			    		    				<paper-icon-button class="contactSocialIcons twitterColour" icon="social-post:twitter" flex></paper-icon-button>
+
+			    		    				<paper-icon-button class="contactSocialIcons" icon="social-post:instagram" flex></paper-icon-button>
+
+			    		    				<paper-icon-button class="contactSocialIcons goolgePlusRedColor" icon="mail" flex></paper-icon-button>
+
+			    		    				<paper-icon-button class="contactSocialIcons phoneIconColor" icon="hardware:phone-android" flex></paper-icon-button>
+
+			    		    				<img src="/images/loyalty_score.jpg">
+			    		    			</div>
+
+			    		    		</paper-shadow>
+
+	    		    		    	</div>
+
+	    		    		    	<div class="allContactsPerRowContainer" style="margin-top:30px;" horizontal layout>
+
+	    		    		    		<paper-shadow z="2" class="perContactRowContainer" style="width:45%; background-color: #fff; height:100px;" horizontal layout> 
+
+	    		    		    			<img src="/images/rohan.jpg" style="max-width:100px; max-height:100px;">
+
+	    		    		    			<div class="avatarSocioIcons" flex style="padding-left:32px; padding-top:16px;">
+
+	    		    							<div class="contactName" style="color:rgba(0,0,0,0.6); font-size:20px; font-weight:bold; padding-left:10px; margin-bottom:6px;">Ray Bhau <span style="font-weight:normal; color:rgba(0,0,0,0.6); font-size:14px;">[$619 from 6 visits]</span></div>
+
+	    		    		    				<paper-icon-button class="contactSocialIcons facebookColour" icon="social-post:facebook" flex></paper-icon-button>
+
+	    		    		    				<paper-icon-button class="contactSocialIcons twitterColour" icon="social-post:twitter" flex></paper-icon-button>
+
+	    		    		    				<paper-icon-button class="contactSocialIcons" icon="social-post:instagram" flex></paper-icon-button>
+
+	    		    		    				<paper-icon-button class="contactSocialIcons goolgePlusRedColor" icon="mail" flex></paper-icon-button>
+
+	    		    		    				<paper-icon-button class="contactSocialIcons phoneIconColor" icon="hardware:phone-android" flex></paper-icon-button>
+
+	    		    		    				<img src="/images/loyalty_score.jpg">
+
+	    		    		    			</div>
+
+	    		    		    		</paper-shadow>
+
+										<span flex></span>
+
+			    		    		<paper-shadow z="2" class="perContactRowContainer" style="width:45%; background-color: #fff; height:100px;" horizontal layout> 
+
+			    		    			<img src="/images/male_avatar_icon.jpg" style="max-width:100px; max-height:100px;">
+
+			    		    			<div class="avatarSocioIcons" flex style="padding-left:32px; padding-top:16px;">
+
+			    							<div class="contactName" style="color:rgba(0,0,0,0.6); font-size:20px; font-weight:bold; padding-left:10px; margin-bottom:6px;">The Stud <span style="font-weight:normal; color:rgba(0,0,0,0.6); font-size:14px;">[$19 from 1 visit]</span></div>
+
+			    		    				<paper-icon-button class="contactSocialIcons facebookColour" icon="social-post:facebook" flex></paper-icon-button>
+
+			    		    				<paper-icon-button class="contactSocialIcons twitterColour" icon="social-post:twitter" flex></paper-icon-button>
+
+			    		    				<paper-icon-button class="contactSocialIcons" icon="social-post:instagram" flex></paper-icon-button>
+
+			    		    				<paper-icon-button class="contactSocialIcons goolgePlusRedColor" icon="mail" flex></paper-icon-button>
+
+			    		    				<paper-icon-button class="contactSocialIcons phoneIconColor" icon="hardware:phone-android" flex></paper-icon-button>
+
+			    		    				<img src="/images/loyalty_score.jpg">
+			    		    			</div>
+
+			    		    		</paper-shadow>
+
+	    		    		    	</div>
+
+			    		<div class="allContactsPerRowContainer" style="margin-top:30px;" horizontal layout>
+
+			    		<paper-shadow z="2" class="perContactRowContainer" style="width:45%; background-color: #fff; height:100px;" horizontal layout> 
+
+			    			<img src="/images/akash.jpg" style="max-width:100px; max-height:100px;">
+
+			    			<div class="avatarSocioIcons" flex style="padding-left:32px; padding-top:16px;">
+
+								<div class="contactName" style="color:rgba(0,0,0,0.6); font-size:20px; font-weight:bold; padding-left:10px; margin-bottom:6px;">Akash Babu <span style="font-weight:normal; color:rgba(0,0,0,0.6); font-size:14px;">[$213 from 4 visits]</span></div>
+
+			    				<paper-icon-button class="contactSocialIcons facebookColour" icon="social-post:facebook" flex></paper-icon-button>
+
+			    				<paper-icon-button class="contactSocialIcons twitterColour" icon="social-post:twitter" flex></paper-icon-button>
+
+			    				<paper-icon-button class="contactSocialIcons" icon="social-post:instagram" flex></paper-icon-button>
+
+			    				<paper-icon-button class="contactSocialIcons goolgePlusRedColor" icon="mail" flex></paper-icon-button>
+
+			    				<paper-icon-button class="contactSocialIcons phoneIconColor" icon="hardware:phone-android" flex></paper-icon-button>
+
+			    				<img src="/images/loyalty_score.jpg" style="top:-4px;">
+
+			    			</div>
+
+			    		</paper-shadow>
+							
+								<span flex></span>
+
+			    		    		<paper-shadow z="2" class="perContactRowContainer" style="width:45%; background-color: #fff; height:100px;" horizontal layout> 
+
+			    		    			<img src="/images/sush.jpg" style="max-width:100px; max-height:100px;">
+
+			    		    			<div class="avatarSocioIcons" flex style="padding-left:32px; padding-top:16px;">
+
+			    							<div class="contactName" style="color:rgba(0,0,0,0.6); font-size:20px; font-weight:bold; padding-left:10px; margin-bottom:6px;">The Babe <span style="font-weight:normal; color:rgba(0,0,0,0.6); font-size:14px;">[$13 from 2 visits]</span></div>
+
+			    		    				<paper-icon-button class="contactSocialIcons facebookColour" icon="social-post:facebook" flex></paper-icon-button>
+
+			    		    				<paper-icon-button class="contactSocialIcons twitterColour" icon="social-post:twitter" flex></paper-icon-button>
+
+			    		    				<paper-icon-button class="contactSocialIcons" icon="social-post:instagram" flex></paper-icon-button>
+
+			    		    				<paper-icon-button class="contactSocialIcons goolgePlusRedColor" icon="mail" flex></paper-icon-button>
+
+			    		    				<paper-icon-button class="contactSocialIcons phoneIconColor" icon="hardware:phone-android" flex></paper-icon-button>
+
+			    		    				<img src="/images/loyalty_score.jpg">
+			    		    			</div>
+
+			    		    		</paper-shadow>
+
+			    		    	</div>
+
+			    		    	<div class="allContactsPerRowContainer" style="margin-top:30px;" horizontal layout>
+
+	    		    		    		<paper-shadow z="2" class="perContactRowContainer" style="width:45%; background-color: #fff; height:100px;" horizontal layout> 
+
+	    		    		    			<img src="/images/ugale.jpg" style="max-width:100px; max-height:100px;">
+
+	    		    		    			<div class="avatarSocioIcons" flex style="padding-left:32px; padding-top:16px;">
+
+	    		    							<div class="contactName" style="color:rgba(0,0,0,0.6); font-size:20px; font-weight:bold; padding-left:10px; margin-bottom:6px;">Ugale Bava <span style="font-weight:normal; color:rgba(0,0,0,0.6); font-size:14px;">[$666 from 6 visits]</span></div>
+
+	    		    		    				<paper-icon-button class="contactSocialIcons facebookColour" icon="social-post:facebook" flex></paper-icon-button>
+
+	    		    		    				<paper-icon-button class="contactSocialIcons twitterColour" icon="social-post:twitter" flex></paper-icon-button>
+
+	    		    		    				<paper-icon-button class="contactSocialIcons" icon="social-post:instagram" flex></paper-icon-button>
+
+	    		    		    				<paper-icon-button class="contactSocialIcons goolgePlusRedColor" icon="mail" flex></paper-icon-button>
+
+	    		    		    				<paper-icon-button class="contactSocialIcons phoneIconColor" icon="hardware:phone-android" flex></paper-icon-button>
+
+	    		    		    				<img src="/images/loyalty_score.jpg">
+
+	    		    		    			</div>
+
+	    		    		    		</paper-shadow>
+
+										<span flex></span>
+
+			    		    		<paper-shadow z="2" class="perContactRowContainer" style="width:45%; background-color: #fff; height:100px;" horizontal layout> 
+
+			    		    			<img src="/images/female_avatar_icon.jpg" style="max-width:100px; max-height:100px;">
+
+			    		    			<div class="avatarSocioIcons" flex style="padding-left:32px; padding-top:16px;">
+
+			    							<div class="contactName" style="color:rgba(0,0,0,0.6); font-size:20px; font-weight:bold; padding-left:10px; margin-bottom:6px;">The Bitch <span style="font-weight:normal; color:rgba(0,0,0,0.6); font-size:14px;">[$999 from 12 visits]</span></div>
+
+			    		    				<paper-icon-button class="contactSocialIcons facebookColour" icon="social-post:facebook" flex></paper-icon-button>
+
+			    		    				<paper-icon-button class="contactSocialIcons twitterColour" icon="social-post:twitter" flex></paper-icon-button>
+
+			    		    				<paper-icon-button class="contactSocialIcons" icon="social-post:instagram" flex></paper-icon-button>
+
+			    		    				<paper-icon-button class="contactSocialIcons goolgePlusRedColor" icon="mail" flex></paper-icon-button>
+
+			    		    				<paper-icon-button class="contactSocialIcons phoneIconColor" icon="hardware:phone-android" flex></paper-icon-button>
+
+			    		    				<img src="/images/loyalty_score.jpg">
+			    		    			</div>
+
+			    		    		</paper-shadow>
+
+	    		    		    	</div>
+
+	    		    		    	<div class="allContactsPerRowContainer" style="margin-top:30px;" horizontal layout>
+
+	    		    		    		<paper-shadow z="2" class="perContactRowContainer" style="width:45%; background-color: #fff; height:100px;" horizontal layout> 
+
+	    		    		    			<img src="/images/rohan.jpg" style="max-width:100px; max-height:100px;">
+
+	    		    		    			<div class="avatarSocioIcons" flex style="padding-left:32px; padding-top:16px;">
+
+	    		    							<div class="contactName" style="color:rgba(0,0,0,0.6); font-size:20px; font-weight:bold; padding-left:10px; margin-bottom:6px;">Ray Bhau <span style="font-weight:normal; color:rgba(0,0,0,0.6); font-size:14px;">[$619 from 6 visits]</span></div>
+
+	    		    		    				<paper-icon-button class="contactSocialIcons facebookColour" icon="social-post:facebook" flex></paper-icon-button>
+
+	    		    		    				<paper-icon-button class="contactSocialIcons twitterColour" icon="social-post:twitter" flex></paper-icon-button>
+
+	    		    		    				<paper-icon-button class="contactSocialIcons" icon="social-post:instagram" flex></paper-icon-button>
+
+	    		    		    				<paper-icon-button class="contactSocialIcons goolgePlusRedColor" icon="mail" flex></paper-icon-button>
+
+	    		    		    				<paper-icon-button class="contactSocialIcons phoneIconColor" icon="hardware:phone-android" flex></paper-icon-button>
+
+	    		    		    				<img src="/images/loyalty_score.jpg">
+
+	    		    		    			</div>
+
+	    		    		    		</paper-shadow>
+
+										<span flex></span>
+
+			    		    		<paper-shadow z="2" class="perContactRowContainer" style="width:45%; background-color: #fff; height:100px;" horizontal layout> 
+
+			    		    			<img src="/images/male_avatar_icon.jpg" style="max-width:100px; max-height:100px;">
+
+			    		    			<div class="avatarSocioIcons" flex style="padding-left:32px; padding-top:16px;">
+
+			    							<div class="contactName" style="color:rgba(0,0,0,0.6); font-size:20px; font-weight:bold; padding-left:10px; margin-bottom:6px;">The Stud <span style="font-weight:normal; color:rgba(0,0,0,0.6); font-size:14px;">[$19 from 1 visit]</span></div>
+
+			    		    				<paper-icon-button class="contactSocialIcons facebookColour" icon="social-post:facebook" flex></paper-icon-button>
+
+			    		    				<paper-icon-button class="contactSocialIcons twitterColour" icon="social-post:twitter" flex></paper-icon-button>
+
+			    		    				<paper-icon-button class="contactSocialIcons" icon="social-post:instagram" flex></paper-icon-button>
+
+			    		    				<paper-icon-button class="contactSocialIcons goolgePlusRedColor" icon="mail" flex></paper-icon-button>
+
+			    		    				<paper-icon-button class="contactSocialIcons phoneIconColor" icon="hardware:phone-android" flex></paper-icon-button>
+
+			    		    				<img src="/images/loyalty_score.jpg">
+			    		    			</div>
+
+			    		    		</paper-shadow>
+
+	    		    		    	</div>
 
 			    	</div>
 

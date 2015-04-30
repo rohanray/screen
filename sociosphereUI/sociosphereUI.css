@@ -13,10 +13,6 @@ core-toolbar {
 	padding: 40px;
 }
 
-.card {
-	padding: 40px;
-}
-
 .facebookColour {
 	color: #3b5998 ;
 }
@@ -25,6 +21,14 @@ core-toolbar {
 	color: #4099FF
 }
 
+.goolgePlusRedColor {
+	color: #dd4b39;
+}
+
 .contactSocialIcons {
 	padding:8px;
+}
+
+.phoneIconColor {
+	color: #00AFF0;
 }
