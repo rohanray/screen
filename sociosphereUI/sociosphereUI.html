@@ -50,7 +50,10 @@
 </head>
 
 <body>
-  {{> headerLayoutWIP}}
+
+	<div>
+  		{{> headerLayoutWIP}}
+  	</div>
 </body>
 
 <template name="headerLayoutWIP">
@@ -61,19 +64,69 @@
 
 			<core-toolbar>Socio<span style="color:#24AFE5;">Sphere</span></core-toolbar>
 				
-				<core-menu>
+				<core-menu class="sideMainMenu" selected="0" on-core-select="{{selectAction}}">
 
-					<core-item label="My Facebook" icon="social-post:facebook" class="facebookColour"></core-item>
+					<core-item label="Social Feed" icon="social-post:facebook" class="facebookColour"></core-item>
 					
-					<core-item label="My Twitter" icon="social-post:twitter" class="twitterColour"></core-item>
+					<core-item label="Social Contacts" icon="social-post:twitter" class="twitterColour"></core-item>
 
-					<core-item label="Social Contacts" icon="social:people" ></core-item>
+					<core-item label="Email" icon="social:people" ></core-item>
+
+					<core-item label="Campaigns" icon="social:people" ></core-item>
 				
 				</core-menu>
 		
 		</core-header-panel>
 
-		<core-header-panel style="background:#f2f2f2;" mode="waterfall-tall" main>
+		{{> Template.dynamic template=whichHeaderPanel}}
+
+	</core-drawer-panel>
+
+</template>
+
+<template name="Social Feed">
+
+			<core-header-panel style="background:#f2f2f2;" mode="waterfall-tall" main>
+			<core-toolbar top><core-item label="Social Feed" icon="social:people"></core-item></core-toolbar>
+
+			<core-toolbar>
+				<paper-icon-button core-drawer-toggle icon="menu"></paper-icon-button>
+
+				<paper-tabs selected="4" horizontal flex layout style="font-size:0.7em;">
+  
+    <paper-tab inline flex center-center horizontal layout>Facebook</paper-tab>
+    
+    <paper-tab inline flex center-center horizontal layout>Twitter</paper-tab>
+    
+    <paper-tab inline flex center-center horizontal layout>Instagram</paper-tab>
+
+    <paper-tab inline flex center-center horizontal layout>All Feed</paper-tab>
+    
+  </paper-tabs>
+
+				<span flex></span>
+
+				<paper-icon-button icon="search"></paper-icon-button> 
+				
+				<paper-icon-button icon="more-vert" horizontal end-justified layout></paper-icon-button>
+
+			</core-toolbar>
+
+			<div class="content">
+
+				??
+
+		    </div>
+
+		</core-header-panel>
+	
+
+</template>
+
+
+<template name="Social Contacts">
+
+			<core-header-panel style="background:#f2f2f2;" mode="waterfall-tall" main>
 			<core-toolbar top><core-item label="Social Contacts" icon="social:people"></core-item></core-toolbar>
 
 			<core-toolbar>
@@ -101,7 +154,20 @@
 
 			<div class="content">
 
-			    <paper-shadow z="0" style="background:#f2f2f2; padding:40px;" flex>
+			        {{> socialContactsContent}}
+
+
+		    </div>
+
+		</core-header-panel>
+	
+
+</template>
+
+
+<template name="socialContactsContent">
+	
+	<paper-shadow z="0" style="background:#f2f2f2; padding:40px;" flex>
 
 			    	<div class="allContactsContainer">
 
@@ -426,11 +492,6 @@
 			    	</div>
 
 			    </paper-shadow>
-			        
-			    </div>
-
-		</core-header-panel>
-
-	</core-drawer-panel>
-
 </template>
+
+			    
