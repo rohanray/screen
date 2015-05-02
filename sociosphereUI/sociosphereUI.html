@@ -12,8 +12,9 @@
 <link rel="import" href="/components/core-drawer-panel/core-drawer-panel.html">
 <link rel="import" href="/components/core-pages/core-pages.html">
 <link rel="import" href="/components/core-icons/core-icons.html">
-<link rel="import" href="/components/core-icons/hardware-icons.html">
+<link rel="import" href="/components/core-icons/image-icons.html">
 <link rel="import" href="/components/core-icons/editor-icons.html">
+<link rel="import" href="/components/core-icons/communication-icons.html">
 <link rel="import" href="/components/core-icons/social-icons.html">
 <link rel="import" href="/components/core-item/core-item.html">
 <link rel="import" href="/components/core-menu/core-menu.html">
@@ -66,13 +67,15 @@
 				
 				<core-menu class="sideMainMenu" selected="0" on-core-select="{{selectAction}}">
 
-					<core-item label="Social Feed" icon="social-post:facebook" class="facebookColour"></core-item>
+					<core-item label="Social Feed" icon="toc"></core-item>
 					
-					<core-item label="Social Contacts" icon="social-post:twitter" class="twitterColour"></core-item>
+					<core-item label="Social Contacts" icon="social:people"></core-item>
 
-					<core-item label="Email" icon="social:people" ></core-item>
+					<core-item label="Email" icon="mail" ></core-item>
 
-					<core-item label="Campaigns" icon="social:people" ></core-item>
+					<core-item label="Analytics" icon="assessment" ></core-item>
+
+					<core-item label="Campaigns" icon="assignment" ></core-item>
 				
 				</core-menu>
 		
@@ -87,7 +90,7 @@
 <template name="Social Feed">
 
 			<core-header-panel style="background:#f2f2f2;" mode="waterfall-tall" main>
-			<core-toolbar top><core-item label="Social Feed" icon="social:people"></core-item></core-toolbar>
+			<core-toolbar top><core-item label="Social Feed" icon="toc"></core-item></core-toolbar>
 
 			<core-toolbar>
 				<paper-icon-button core-drawer-toggle icon="menu"></paper-icon-button>
@@ -114,7 +117,7 @@
 
 			<div class="content">
 
-				??
+				{{> socialFeedContent}}
 
 		    </div>
 
@@ -123,44 +126,124 @@
 
 </template>
 
+<template name="socialFeedContent">
+
+		<paper-shadow z="0" style="background:#f2f2f2; padding:40px;" vertical layout>
+
+			<div class="feedCard" flex>
+
+	    		<paper-shadow z="2" class="perContactRowContainer" style="width:90%; background-color: #fff; height:100px;" horizontal layout> 
+
+			    			<img src="/images/akash.jpg" style="max-width:100px; max-height:100px;">
+
+			    			<div class="avatarSocioIcons" style="padding-left:32px; padding-top:16px;" horizontal layout>
+
+								<div class="contactName" style="color:rgba(0,0,0,0.6); font-size:16px; font-weight:bold;" flex>Akash Babu <span style="font-weight:normal; color:rgba(0,0,0,0.6); font-size:12px;">[April 26 at 10:41am]</span></div>
+
+			    				<core-icon class="contactSocialIcons facebookColour" icon="social-post:facebook" style="width:12px; height:12px; padding-left:16px"></core-icon>
+
+			    				<core-icon icon="image:looks-4" style="width:32px; height:32px; padding-left:16px color:green"></core-icon>
+
+			    			</div>
+
+							<div>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qu.
+							</div>
+
+			    		</paper-shadow>
+
+			</div>
+
+						<div class="feedCard" flex>
+
+	    		<paper-shadow z="2" class="perContactRowContainer" style="width:90%; background-color: #fff; height:100px;" horizontal layout> 
+
+			    			<img src="/images/akash.jpg" style="max-width:100px; max-height:100px;">
+
+			    			<div class="avatarSocioIcons" style="padding-left:32px; padding-top:16px;" horizontal layout>
+
+								<div class="contactName" style="color:rgba(0,0,0,0.6); font-size:16px; font-weight:bold;" flex>Akash Babu <span style="font-weight:normal; color:rgba(0,0,0,0.6); font-size:12px;">[April 26 at 10:41am]</span></div>
+
+			    				<core-icon class="contactSocialIcons facebookColour" icon="social-post:facebook" style="width:12px; height:12px; padding-left:16px"></core-icon>
+
+			    				<core-icon icon="image:looks-4" style="width:32px; height:32px; padding-left:16px color:green"></core-icon>
+
+			    			</div>
+
+							<div>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qu.
+							</div>
+
+			    		</paper-shadow>
+
+			</div>
+
+						<div class="feedCard" flex>
+
+	    		<paper-shadow z="2" class="perContactRowContainer" style="width:90%; background-color: #fff; height:100px;" horizontal layout> 
+
+			    			<img src="/images/akash.jpg" style="max-width:100px; max-height:100px;">
+
+			    			<div class="avatarSocioIcons" style="padding-left:32px; padding-top:16px;" horizontal layout>
+
+								<div class="contactName" style="color:rgba(0,0,0,0.6); font-size:16px; font-weight:bold;" flex>Akash Babu <span style="font-weight:normal; color:rgba(0,0,0,0.6); font-size:12px;">[April 26 at 10:41am]</span></div>
+
+			    				<core-icon class="contactSocialIcons facebookColour" icon="social-post:facebook" style="width:12px; height:12px; padding-left:16px"></core-icon>
+
+			    				<core-icon icon="image:looks-4" style="width:32px; height:32px; padding-left:16px color:green"></core-icon>
+
+			    			</div>
+
+							<div>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qu.
+							</div>
+
+			    		</paper-shadow>
+
+			</div>
+
+		</paper-shadow>
+	
+</template>
+
 
 <template name="Social Contacts">
 
-			<core-header-panel style="background:#f2f2f2;" mode="waterfall-tall" main>
-			<core-toolbar top><core-item label="Social Contacts" icon="social:people"></core-item></core-toolbar>
+	<core-header-panel style="background:#f2f2f2;" mode="waterfall-tall" main>
+		
+		<core-toolbar top><core-item label="Social Contacts" icon="social:people"></core-item></core-toolbar>
 
-			<core-toolbar>
-				<paper-icon-button core-drawer-toggle icon="menu"></paper-icon-button>
+		<core-toolbar>
+		
+			<paper-icon-button core-drawer-toggle icon="menu"></paper-icon-button>
 
-				<paper-tabs selected="4" horizontal flex layout style="font-size:0.7em;">
+			<paper-tabs selected="4" horizontal flex layout style="font-size:0.7em;">
   
-    <paper-tab inline flex center-center horizontal layout>Facebook</paper-tab>
+			    <paper-tab inline flex center-center horizontal layout>Facebook</paper-tab>
+			    
+			    <paper-tab inline flex center-center horizontal layout>Twitter</paper-tab>
+			    
+			    <paper-tab inline flex center-center horizontal layout>Instagram</paper-tab>
+
+			    <paper-tab inline flex center-center horizontal layout>All Contacts</paper-tab>
     
-    <paper-tab inline flex center-center horizontal layout>Twitter</paper-tab>
-    
-    <paper-tab inline flex center-center horizontal layout>Instagram</paper-tab>
+  			</paper-tabs>
 
-    <paper-tab inline flex center-center horizontal layout>All Contacts</paper-tab>
-    
-  </paper-tabs>
+			<span flex></span>
 
-				<span flex></span>
+			<paper-icon-button icon="search"></paper-icon-button> 
+			
+			<paper-icon-button icon="more-vert" horizontal end-justified layout></paper-icon-button>
 
-				<paper-icon-button icon="search"></paper-icon-button> 
-				
-				<paper-icon-button icon="more-vert" horizontal end-justified layout></paper-icon-button>
+		</core-toolbar>
 
-			</core-toolbar>
+		<div class="content">
 
-			<div class="content">
+		    {{> socialContactsContent}}
 
-			        {{> socialContactsContent}}
+	    </div>
 
-
-		    </div>
-
-		</core-header-panel>
-	
+	</core-header-panel>
 
 </template>
 
