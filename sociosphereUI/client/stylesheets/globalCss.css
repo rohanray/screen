@@ -1,0 +1,46 @@
+/* CSS declarations go here */
+
+body {
+	font-family: "Roboto";
+}
+
+core-toolbar {
+	background:	#000;
+	color: #FFF;
+}
+
+.content {
+	padding: 40px;
+}
+
+.facebookColour {
+	color: #3b5998 ;
+}
+
+.twitterColour {
+	color: #4099FF
+}
+
+.goolgePlusRedColor {
+	color: #dd4b39;
+}
+
+.contactSocialIcons {
+	padding:8px;
+}
+
+.phoneIconColor {
+	color: #00AFF0;
+}
+
+core-item.core-selected {
+  color: orange;
+}
+
+paper-tab::shadow #ink {
+  color: rgba(255,255,255,0.7);
+}
+
+paper-tabs::shadow #selectionBar {
+  background-color: #fff;
+}

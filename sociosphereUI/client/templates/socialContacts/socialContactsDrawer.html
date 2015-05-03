@@ -1,0 +1,48 @@
+<template name="socialContacts">
+
+	<core-header-panel style="background:#f2f2f2;" mode="waterfall-tall" main>
+		
+		<core-toolbar top><core-item label="Social Contacts" icon="social:people"></core-item></core-toolbar>
+
+		<core-toolbar style="background:#659CEF;">
+		
+			<paper-icon-button core-drawer-toggle icon="menu"></paper-icon-button>
+
+			<paper-tabs selected="0" horizontal flex layout style="font-size:0.7em;" class="contactsDrawerPaperTabs">
+  
+			    <paper-tab label="fbLabel" inline flex center-center horizontal layout>Facebook</paper-tab>
+			    
+			    <paper-tab inline flex center-center horizontal layout>Twitter</paper-tab>
+			    
+			    <paper-tab inline flex center-center horizontal layout>Instagram</paper-tab>
+
+			    <paper-tab inline flex center-center horizontal layout>All Contacts</paper-tab>
+    
+  			</paper-tabs>
+
+  			<core-pages selected="{{selected}}">
+  			  <div>fb</div>
+  			  <div>
+				{{> twitterContacts}}
+  			  </div>
+  			  <div>insta</div>
+  			  <div>all</div>
+  			</core-pages>
+
+			<span flex></span>
+
+			<paper-icon-button icon="search"></paper-icon-button> 
+			
+			<paper-icon-button icon="more-vert" horizontal end-justified layout></paper-icon-button>
+
+		</core-toolbar>
+
+		<div class="content">
+
+		    {{> socialContactsContent}}
+
+	    </div>
+
+	</core-header-panel>
+
+</template>

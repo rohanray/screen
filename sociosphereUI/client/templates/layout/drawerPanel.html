@@ -1,0 +1,31 @@
+<template name="drawerPanel">
+
+	<core-drawer-panel id="drawerPanel" responsiveWidth="800px">
+	
+		<core-header-panel style="background:#fff;" mode="waterfall" drawer>
+
+			<core-toolbar>Socio<span style="color:#24AFE5;">Sphere</span></core-toolbar>
+				
+				<core-menu class="sideMainMenu" selected="0" on-core-select="{{selectAction}}">
+
+					<core-item label="Social Feed" icon="toc" id="socialFeed"></core-item>
+					
+					<core-item label="Social Contacts" icon="social:people" id="socialContacts"></core-item>
+
+					<core-item label="Email" icon="mail" id="email"></core-item>
+
+					<core-item label="Analytics" icon="assessment" id="analytics"></core-item>
+
+					<core-item label="Campaigns" icon="assignment" id="campaigns"></core-item>
+				
+				</core-menu>
+
+				{{> loginButtons}}
+		
+		</core-header-panel>
+
+		{{> Template.dynamic template=whichHeaderPanel}}
+
+	</core-drawer-panel>
+
+</template>
