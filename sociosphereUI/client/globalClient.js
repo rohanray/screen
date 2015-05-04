@@ -30,12 +30,9 @@ TwitterFollowersIDsCollecions = new Mongo.Collection("twitterFollowersIDs");
 
       //start of twitter
 
-      Meteor.call('displayTwitterFollowersIDsCollecions', 1, function (error, result) {
-        console.log(result);
+      Meteor.call('getTwitterFollowersIDsCollectionsClient', function (error, result) {
+        console.log("client side functions : "+result);
       });
-
-
-      //twitterFollowersIDs=
 
       console.log("contactsDrawerPaperTabs event : event.originalEvent.detail.item.getAttrr...label");
     }
