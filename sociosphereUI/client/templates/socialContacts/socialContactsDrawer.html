@@ -20,15 +20,6 @@
     
   			</paper-tabs>
 
-  			<core-pages selected="{{selected}}">
-  			  <div>fb</div>
-  			  <div>
-				{{> twitterContacts}}
-  			  </div>
-  			  <div>insta</div>
-  			  <div>all</div>
-  			</core-pages>
-
 			<span flex></span>
 
 			<paper-icon-button icon="search"></paper-icon-button> 
@@ -39,7 +30,14 @@
 
 		<div class="content">
 
-		    {{> socialContactsContent}}
+		    <core-pages selected="{{selected}}">
+  			  <div>fb</div>
+  			  <div>
+				{{> twitterContacts}}
+  			  </div>
+  			  <div>insta</div>
+  			  <div>all</div>
+  			</core-pages>
 
 	    </div>
 
