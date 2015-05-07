@@ -1,4 +1,5 @@
 TwitterFollowersIDsCollecions = new Mongo.Collection("twitterFollowersIDs");
+TwitterFollowersDetailsCollecions = new Mongo.Collection("twitterFollowersDetails");
 
   Template.drawerPanel.helpers({
     whichHeaderPanel: function () {
@@ -11,7 +12,7 @@ TwitterFollowersIDsCollecions = new Mongo.Collection("twitterFollowersIDs");
     'core-select .sideMainMenu': function (event, detail) {
       e = event;
 
-      console.log("event : "+event.originalEvent.detail.item.id);
+      //console.log("event : "+event.originalEvent.detail.item.id);
 
       Session.set("whichHeaderPanel", event.originalEvent.detail.item.id);
 
@@ -24,18 +25,37 @@ TwitterFollowersIDsCollecions = new Mongo.Collection("twitterFollowersIDs");
       var tabs = document.querySelector('paper-tabs');
       var pages = document.querySelector('core-pages');
 
-      console.log("tabs: "+tabs+" pages : "+pages);
+      //console.log("tabs: "+tabs+" pages : "+pages);
 
       pages.selected = tabs.selected;
 
-      //start of twitter
-
-      Meteor.call('getTwitterFollowersIDsCollectionsClient', function (error, result) {
-        console.log("client side functions : "+result);
-      });
-
-      console.log("contactsDrawerPaperTabs event : event.originalEvent.detail.item.getAttrr...label");
+      //console.log("contactsDrawerPaperTabs event : event.originalEvent.detail.item.getAttrr...label");
     }
+  });
+
+  Template.twitterContacts.onCreated(function () {
+    this.counter = new ReactiveVar(2);
+  });
+
+  Template.twitterContacts.helpers({
+    twitterContactsHelper: function () {
+      curntCounter=0;
+      return TwitterFollowersDetailsCollecions.find();
+    },
+
+    contactsColumnHelperIsOdd: function(){
+        curntCounter=curntCounter+1;
+        var twitterContactsRowVar=curntCounter%2;
+        console.log(curntCounter+":"+twitterContactsRowVar);
+        Template.instance().counter.set(curntCounter+1);
+        if(twitterContactsRowVar%2!="0"){
+          return true;
+        }
+        else{
+          return false;
+        }
+    }
+
   });
 
     Accounts.ui.config({
