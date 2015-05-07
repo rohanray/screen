@@ -18,18 +18,24 @@ Meteor.startup(function () {
 
     // this is the server method called from the client
 
-    getTwitterFollowersIDsCollectionsClient : function (screenname){
+    getTwitterFollowersIDsCollectionsClient : function (screenname, twtr_nxt_crsr_prm){
       Meteor.setTimeout(function(screenname){
-        T.get('followers/list', { screen_name: screenname }, Meteor.bindEnvironment(function (err, data, response) {
+
+        var dataTemp;
+
+        T.get('followers/list', { screen_name: screenname, cursor: twtr_nxt_crsr_prm }, Meteor.bindEnvironment(function (err, data, response) {
         
         console.log("from getTwitterFollowersIDsCollectionsClient : ");
-        console.log(data);
+        //console.log(data);
 
-        var vids = data.users;
+        dataTemp=data;
+
+        var vids=dataTemp.users;
         for(var i in vids)
           {
-            //Meteor.call('getTwitterFollowersDetailsCollectionsClient',tempTwtrFlwrID);
-            /*TwitterFollowersIDsCollecions.insert({
+
+            console.log("for loop : "+vids[i].name);
+            TwitterFollowersIDsCollecions.insert({
               twitterFollowerID:vids[i].id_str
             });
 
@@ -39,11 +45,25 @@ Meteor.startup(function () {
               twitterFollowerName:vids[i].name,
               twitterFollowerProfilePicURL:vids[i].profile_image_url
 
-            });*/
+            });
           }
 
-        return data;
+          var twtr_nxt_crsr_var=dataTemp.next_cursor_str;
+
+          console.log("data.next_cursor_str : "+twtr_nxt_crsr_var);
+
+          if (twtr_nxt_crsr_var != "0") {
+            console.log("CALLING AGAIN!!!");
+            Meteor.call('getTwitterFollowersIDsCollectionsClient',screenname,twtr_nxt_crsr_var);
+          }
+
       }));
+
+
+
+          /*if (twtr_nxt_crsr_var != "0") {
+            Meteor.call('getTwitterFollowersIDsCollectionsClient',screenname,twtr_nxt_crsr_var);
+          }*/
 
       },10);
       return;
