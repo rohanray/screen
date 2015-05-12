@@ -1,0 +1,108 @@
+<template name="twitterFeedContent">
+
+	<div class="allMyTweetsMainContainer">
+		{{#each twitterAllMyTweetsHelper}}
+			{{> eachTwitterTweetTmpl}}
+		{{/each}}
+	</div>
+
+</template>
+
+<template name="tryTwitterWidget">
+	<a class="twitter-timeline" href="https://twitter.com/rohanray" data-widget-id="597422809720168448">Tweets by @rohanray</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</template>
+
+<template name="eachTwitterTweetTmpl">
+
+	<div class="feedCardContainer" style="padding-bottom:32px;">
+
+		<paper-shadow z="1" style="width:100%; background-color: #fff; height:120px;">
+
+			<div class="perFeedRowContainer" horizontal layout>
+
+				<img src="/images/akash.jpg" style="width:60px; height:60px; padding-left:32px; padding-top:22px;">
+
+				<div class="feedContainer" three flex style="padding-left:32px; padding-top:22px; padding-right:22px;">
+
+					<div class="feedMetaContainer" horizontal layout>
+
+						<div class="contactName" style="color:rgba(0,0,0,0.6); font-size:14px; font-weight:bold; padding-top:4px;">{{tweetFrom}} @{{tweetFrom}}<span style="font-weight:normal; color:rgba(0,0,0,0.6); font-size:14px;">{{createdAt}}</span></div>
+
+						<span flex></span>
+
+						<core-icon icon="launch" style="color:#025FA9;"></core-icon>
+
+					</div>
+
+					<div class="feedMessageContainer" style="font-size:14px; padding-top:12px; color:#262626;">
+						
+						{{tweetText}}
+
+					</div>
+
+					<div class="feedMessageContainer" style="font-size:14px; padding-top:12px; color:#262626;" horizontal layout>
+						
+						{{retweetCount}} RETWEET {{favoriteCount}} FAVORITES
+
+						<span flex></span>
+
+						<img src="/images/twitterReplyIcon.png"/>
+						<img style="padding-left:10px;" src="/images/twitterRetweetIcon.png"/>
+						<img style="padding-left:10px;" src="/images/twitterFavoriteIcon.png"/>
+
+					</div>
+
+				</div>
+				
+			</div>
+
+		</paper-shadow>
+
+	</div>
+
+</template>
+
+<template name="eachTwitterTweetTmplSample">
+
+	<div class="feedCardContainer" style="padding-bottom:32px;">
+
+		<paper-shadow z="1" style="width:100%; background-color: #fff; height:120px;">
+
+			<div class="perFeedRowContainer" horizontal layout>
+
+				<img src="/images/akash.jpg" style="width:60px; height:60px; padding-left:32px; padding-top:22px;">
+
+				<div class="feedContainer" three flex style="padding-left:32px; padding-top:22px; padding-right:22px;">
+
+					<div class="feedMetaContainer" horizontal layout>
+
+						<div class="contactName" style="color:rgba(0,0,0,0.6); font-size:14px; font-weight:bold; padding-top:4px;">Sample Tweeter @SampleScreenName<span style="font-weight:normal; color:rgba(0,0,0,0.6); font-size:14px;">April 26 at 10:13am</span></div>
+
+						<span flex></span>
+
+						<core-icon icon="launch" style="color:#025FA9;"></core-icon>
+
+					</div>
+
+					<div class="feedMessageContainer" style="font-size:14px; padding-top:12px; color:#262626;">
+						
+						SAMPLE--- Libraries grow up so fast! Polymer 0.9 is coming: how to prepare and where 0.8 went.
+
+					</div>
+
+					<div class="feedMessageContainer" style="font-size:14px; padding-top:12px; color:#262626;">
+						
+						2 RETWEET 3 FAVORITES
+
+					</div>
+
+				</div>
+				
+			</div>
+
+		</paper-shadow>
+
+	</div>
+
+</template>
