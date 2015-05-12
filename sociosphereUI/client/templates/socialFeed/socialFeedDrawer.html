@@ -8,7 +8,7 @@
 
 			<paper-icon-button core-drawer-toggle icon="menu"></paper-icon-button>
 
-			<paper-tabs selected="4" horizontal flex layout style="font-size:0.7em;">
+			<paper-tabs selected="4" horizontal flex layout style="font-size:0.7em;" class="socialFeedDrawerPaperTabs">
 
 			    <paper-tab inline flex center-center horizontal layout>Facebook</paper-tab>
 			    
@@ -30,7 +30,16 @@
 
 		<div class="content">
 
-			{{> socialFeedContent}}
+			<core-pages selected="{{selected}}">
+  			  <div>
+  			  	{{> socialFeedContent}}
+  			  </div>
+  			  <div>
+				{{> twitterFeedContent}}
+  			  </div>
+  			  <div>insta</div>
+  			  <div>all</div>
+  			</core-pages>
 
 	    </div>
 
