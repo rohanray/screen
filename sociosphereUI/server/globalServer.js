@@ -15,6 +15,12 @@ Meteor.startup(function () {
 
   Meteor.methods({
 
+    //this is fb method to get page likers names
+
+    getFBPageLikes: function(){
+
+        },
+
     //this is server method for posting  a new tweet - PURE TEXT
     postMyNewTweet: function(tweetText){
       Meteor.setTimeout(function(tweetText){
