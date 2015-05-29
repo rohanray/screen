@@ -1,0 +1,32 @@
+{{#if contactsColumnHelperIsOdd}}
+        {{> eachTwitterContactOdd}}
+      {{else}}
+        {{> eachTwitterContactEven}}
+      {{/if}}
+
+      TwitterFollowersDetailsCollecions
+
+      fbpage access token : CAAFyJ69x88cBAFUYrORWAp01aVkKxuulOPw9n0dyrBg5kSSSh8ZCZBr5B4OMAzMG4ewhchlffW8QO7uwitmQiQp4trZBuhUVA3Yw6ZBVwbPIqJi0eFs6FmOHfdrpPwLyxYM739REihcIgyY6UTOciiOQZBm2MyFkiB02j0zvZCxBm3dpHi9zsKKJk6pHORPgPV7ux7ZBm4UsAK6ZBIV16Wvx
+
+      fb page id : 1558622937701203
+
+
+      <template name="newFacebookPost">
+
+	<form class="new-fb-post">
+	
+		<paper-input floatingLabel label="Create a new Facebook Post" name="newFacebookPostTextArea">
+		</paper-input>
+
+		<input type="text" name="text" placeholder="Type to add new tasks" />
+
+		<paper-button raised fill class="newFacebookPostBtn">
+		<buton>
+		  <core-icon icon="social-post:facebook"> </core-icon>
+		  Post on Facebook Page
+		  </buton>
+		</paper-button>
+
+	</form>
+
+</template>
