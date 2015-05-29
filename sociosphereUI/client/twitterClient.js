@@ -1,3 +1,11 @@
+Accounts.ui.config({
+  requestPermissions: {
+    twitter: ['email', 'public_profile', 'user_friends','read_stream','user_likes']
+    
+  }
+
+});
+
 Template.twitterContacts.onCreated(function () {
   this.counter = new ReactiveVar(0);
 });

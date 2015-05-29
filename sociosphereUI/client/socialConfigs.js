@@ -1,14 +1,14 @@
-Accounts.ui.config({
+/*Accounts.ui.config({
   requestPermissions: {
-    twitter: ['email', 'public_profile', 'user_friends','read_stream','user_likes'],
-    facebook: ['email', 'public_profile', 'user_friends','read_stream','user_likes']
+    twitter: ['email', 'public_profile', 'user_friends','read_stream','user_likes']
+    
   }
 
-});
+});*/
 
-//Facebook configs
+//Facebook configs - moved to fbclient.js
 
-(function(d, s, id){
+/*(function(d, s, id){
    var js, fjs = d.getElementsByTagName(s)[0];
    if (d.getElementById(id)) {return;}
    js = d.createElement(s); js.id = id;
@@ -23,5 +23,5 @@ window.fbAsyncInit = function() {
     version    : 'v2.2',
     status     : true
   });
-};
+};*/
 
